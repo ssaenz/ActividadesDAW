@@ -35,6 +35,9 @@
 	<%	}
 	%>
 	</table>
-	<button onclick="window.location.href='http://localhost:8080/Modulo05Practica/index.jsp'">Volver</button>
+	<form action="Controlador">
+		<input type="submit" name="button" value="nuevo empleado">
+		<input type="submit" name="button" value="volver">
+	</form>
 </body>
 </html>

@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Añadir nueva empresa</title>
 </head>
 <body>
 
-<form action="formulario.html" method="post" enctype="text/plain">
+<form action="EmpresasManager" method="post" enctype="text/plain">
 
 		<table width="100%" border="0" cellspacing="0" cellpadding="10">
 			<tr>CIF <input type="text" name="cif" value=""></tr>

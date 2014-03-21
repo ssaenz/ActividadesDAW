@@ -33,7 +33,6 @@ public class Controlador extends HttpServlet {
     	String actionButton = request.getParameter("button");
     	if ("Empresa".equals(actionButton)){
     		ListaEmpresasBean empresas = DBManager.getInstance().getEmpresas();
-    		ListaEmpresasBean empresasL = DBManager.getInstance().getEmpresas();
     		request.setAttribute("listaEmpresas", empresas);
         	request.getRequestDispatcher("empresa.jsp").forward(request, response);
     	}

@@ -6,14 +6,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Añadir nuevo coche</title>
 </head>
 <body>
 	<jsp:useBean id="listaEmpresas" class="modulo05.bean.ListaEmpresasBean" scope="request" />
-	<form action=Controlador>
-		Matricula: <input type="text" name="matricula" id="matricula">
-		Numero de plazas: <input type="text" name="numero_Plazas" id="numPlazas">
-		<select>
+	<form action=CochesManager>
+		Matricula: <input type="text" name="matricula"/>
+		Numero de plazas: <input type="text" name="numPlazas"/>
+		<select name="cif">
 			<% for (EmpresaBean empresa:listaEmpresas){%>
 				<option value="<%=empresa.getCif()%>"><%=empresa.getNombre()%></option>				
 		<%	}%>

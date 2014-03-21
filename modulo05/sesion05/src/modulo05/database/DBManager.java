@@ -1,6 +1,7 @@
 package modulo05.database;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,7 +11,12 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import modulo05.bean.*;
+import modulo05.bean.CocheBean;
+import modulo05.bean.EmpleadoBean;
+import modulo05.bean.EmpresaBean;
+import modulo05.bean.ListaCochesBean;
+import modulo05.bean.ListaEmpleadosBean;
+import modulo05.bean.ListaEmpresasBean;
 
 public class DBManager {
 	
@@ -134,6 +140,22 @@ public class DBManager {
 			}
 		}
 		return listaCoches;
+	}
+	
+	public boolean createCoche (CocheBean coche) {
+		Connection c = null;
+		try {
+			c = getConnection();
+			PreparedStatement ps = c.prepareStatement("INSERT INTO Coche(matricula, numeroPlazas, cif, nombre) VALUES (?, ?, ?, ?)");
+			ps.setString(1, coche.getMatricula());
+			ps.setInt(2, coche.getNumeroPlazas());
+			ps.setInt(3, coche.getCifEmpresa());
+			ps.setString(4, coche.getConductor());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return true;
 	}
 	
 	
