@@ -4,49 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Sesion</title>
+<title>Actividad 4</title>
 </head>
 <body>
-
-<%
-	String nombreValue = (String) request.getParameter("nombre");
-	String apellidosValue = (String) request.getParameter("apellidos");
-	String telefonoValue = (String) request.getParameter("telefono");
-	boolean invalidate = false;
-	
-	String button = (String) request.getParameter("button");
-	if ("save on session".equals(button)) {
-		session.setAttribute("nombre", nombreValue);
-		session.setAttribute("apellidos", apellidosValue);
-		session.setAttribute("telefono", telefonoValue);
-	} else if ("clear session".equals(button)) {
-		session.invalidate();
-		invalidate = true;
-	}
-%>
-	
-<form >
-
-	<div style="display: block;">Nombre: <input type="text" name="nombre" 
-								<% if (!invalidate && session != null && session.getAttribute("nombre") != null)  {%>
-									value="<%=session.getAttribute("nombre") %>"></div> 
-								<%} else { %> 
-									></div> 
-								<%} %>
-	<div style="display: block;">Apellidos: <input type="text" name="apellidos"
-								<% if (!invalidate && session != null && session.getAttribute("apellidos") != null)  {%>
-									value="<%=session.getAttribute("telefono") %>"></div> 
-								<%} else { %> 
-									></div> 
-								<%} %>
-	<div style="display: block;">Teléfono: <input type="text" name="telefono"
-								<% if (!invalidate && session != null && session.getAttribute("telefono") != null)  {%>
-									value="<%=session.getAttribute("telefono") %>"></div> 
-								<%} else { %> 
-									></div> 
-								<%} %>
-	<input type="submit" name="button" value="save on session">
-	<input type="submit" name="button" value="clear session">
-</form>
+<h2>Ejercicios de la actividad 4:</h2>
+	<form action="sesiones.jsp">
+		<input type="submit" value="Sesiones">
+	</form>
+	<form action="cookies.jsp">
+		<input type="submit" value="Coockies">
+	</form>
+	<form action="/Modulo05Sesion04/DatabaseServlet">
+		<input type="submit" value="Base de datos">
+	</form>
 </body>
 </html>
