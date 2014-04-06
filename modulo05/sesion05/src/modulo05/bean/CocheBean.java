@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class CocheBean implements Serializable{
 
+	private static final long serialVersionUID = -1812992297893817666L;
 	private String matricula;
 	private int numeroPlazas;
 	private String Conductor;

@@ -1,4 +1,4 @@
-package m05.s02;
+package m05.s03;
 
 public class Persona implements java.io.Serializable {
 	/**

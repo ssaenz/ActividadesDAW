@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="m05.s02.Persona, m05.s02.ListaPersonasBean"%>
+    pageEncoding="UTF-8" import="m05.s03.Persona,m05.s03.ListaPersonasBean"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +15,7 @@
 		<input type="submit" name="buttonBean" value="show" />
 	</form>
 	
-	<jsp:useBean id="listaPersonas" class="m05.s02.ListaPersonasBean" scope="request"></jsp:useBean>
+	<jsp:useBean id="listaPersonas" class="m05.s03.ListaPersonasBean" scope="request"></jsp:useBean>
 	
 	<%
 		if (listaPersonas.getPersonas() != null) { %>
